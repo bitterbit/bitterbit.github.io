@@ -1,0 +1,37 @@
+---
+layout: default
+title: Posts
+---
+
+<main class="container">
+    
+    {% for post in site.posts %}
+        <article>
+    		<header>
+    			<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    				<div class="meta">
+    					<time datetime='{{ post.date | date: "%b %-d, %Y" }}'>{{ post.date | date: "%b %-d, %Y" }}</time>
+    				{% if post.author %}, {{ post.author }}{% endif %}
+    				</div>
+    		</header>
+    
+            {% if post.cover %}
+    		    <p><img width=670 src="{{ site.url }}assets/photos/{{ post.cover }}"></img></p>
+    		{% endif %}
+    		
+    		
+			<p class="post-body">
+			    {% if post.content contains '<!--more-->' %}
+                    {{ post.content | split:'<!--more-->' | first }}
+                {% else %}
+                    {{ post.excerpt }}
+                {% endif %}
+			</p>
+    
+    		<p><a href="{{ post.url }}" rel="article">more</a></p>
+    	</article>	
+    	
+    
+    {% endfor %}
+    
+</main>
