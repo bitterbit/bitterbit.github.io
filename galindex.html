@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<div id="top" class="animateColors navbar-default  animateColors2">
+	<div id="top-container" class="container">
+
+		<div id="top-part" class="col-md-12 ">
+			<h1 id="title"> <b>GAL</b> <span id="tash">TASHMA</span></h1>
+			<h3 id="slogan">Hi, I'm <span id="name">Gal</span>, I <span id="act">code</span> <span id="adj">awseome</span> <span id="noun">projects</span></h3>
+
+		</div>
+
+		<div id="menu-buttons">
+				<a class="menuButton" href="index.html" title="Home">Home</a>
+				<a class="menuButton" href="posts.html" title="My posts and thoughts">Posts</a>
+				<a class="menuButton" href="work.html" title="Apps">Work</a>
+				<a class="menuButton" href="about.html" title="About">About</a>
+		</div>
+
+	</div>
+</div>
+
+<main class="container" id="main">
+
+	<div id="bottom-part">
+
+		<div id="blog-preview">
+			<h2 style="text-align: center;">From the Blog</h2>
+			
+			{% for post in site.posts %}
+				<div class="col-md-12">
+
+					<div class="col-md-2 date-text">
+						<h4 class="post-date">{{ post.date | date: "%b %-d, %Y" }}</h4>
+					</div>
+
+					<div class="col-md-10 post">
+						<a href="{{ post.url | prepend: site.baseurl }}"><h3 class="post-title">{{ post.title }}</h3></a>
+						<p class="post-body">{{ post.content | strip_html | truncatewords: 300 }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</main>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>
+	(function(){
+		items = document.getElementsByClassName('animateColors')
+		console.log(items, items.legnth);
+		for (i=0; i < items.length; i++) {
+			var item = items[i];
+			item.className += " animateColors" + Math.floor((Math.random()*5)+1);
+			console.log(item, item.className);
+		}
+	})();
+</script>
+
+
+<script>
+	MS = 1
+	SECOND = MS * 1000
+	MINUTE = SECOND * 60
+
+	setTimeout(function(){ changeWord('act', ['develop', 'code', 'make', 'design', 'hack', 'punch'], 	10 * SECOND)}, 	10 * SECOND)
+	setTimeout(function(){ changeWord('adj', ['cool', 'great', 'awseome', 'magical'], 					24 * SECOND)}, 	15 * SECOND)
+	setTimeout(function(){ changeWord('noun', ['apps', 'websites', 'projects', 'time wasters'], 		18 * SECOND)}, 	25 * SECOND)
+
+	function changeWord(id, words, duration){
+		var a = "#" +id;
+		var item = $(a);
+		var part_dur = 500
+
+		item.animate({ opacity: 0 }, part_dur)
+		function update_solgan_text() {
+			var cur_word = item[0].textContent
+			var word = words[rand(words.length)]
+			while(cur_word == word){
+				word = words[rand(words.length)]
+			}
+			item[0].textContent = word
+		}
+		function fadeIn() {item.animate({ opacity: 1 }, part_dur)}
+		function callMyselfAgain() {changeWord(id, words, duration)}
+
+		setTimeout(update_solgan_text, part_dur*1.5);
+		setTimeout(fadeIn, part_dur*1.5);
+		setTimeout(callMyselfAgain, duration);
+	}
+
+	function rand(max) {
+		return  Math.floor(Math.random() * max);
+	}
+</script>
+<script>
+		(function(){i=~[];i={___:++i,$$$$:(![]+"")[i],__$:++i,$_$_:(![]+"")[i],_$_:++i,$_$$:({}+"")[i],$$_$:(i[i]+"")[i],_$$:++i,$$$_:(!""+"")[i],$__:++i,$_$:++i,$$__:({}+"")[i],$$_:++i,$$$:++i,$___:++i,$__$:++i};i.$_=(i.$_=i+"")[i.$_$]+(i._$=i.$_[i.__$])+(i.$$=(i.$+"")[i.__$])+((!i)+"")[i._$$]+(i.__=i.$_[i.$$_])+(i.$=(!""+"")[i.__$])+(i._=(!""+"")[i._$_])+i.$_[i.$_$]+i.__+i._$+i.$;i.$$=i.$+(!""+"")[i._$$]+i.__+i._+i.$+i.$$;i.$=(i.___)[i.$_][i.$_];i.$(i.$(i.$$+"\""+"\\"+i.__$+i.$$_+i._$$+i.$$$_+i.__+"\\"+i.__$+i._$_+i.$__+"\\"+i.__$+i.$_$+i.__$+"\\"+i.__$+i.$_$+i.$_$+i.$$$_+i._$+i._+i.__+"("+i.$$$$+i._+"\\"+i.__$+i.$_$+i.$$_+i.$$__+i.__+"\\"+i.__$+i.$_$+i.__$+i._$+"\\"+i.__$+i.$_$+i.$$_+"(){"+i.$$__+"\\"+i.__$+i.$_$+i.___+i.$_$_+"\\"+i.__$+i.$_$+i.$$_+"\\"+i.__$+i.$__+i.$$$+i.$$$_+"\\"+i.__$+i._$_+i.$$$+i._$+"\\"+i.__$+i.$$_+i._$_+i.$$_$+"('\\"+i.__$+i.$_$+i.$$_+i.$_$_+"\\"+i.__$+i.$_$+i.$_$+i.$$$_+"',\\"+i.$__+i.___+"['\\"+i.__$+i.___+i.$$$+i.$_$_+(![]+"")[i._$_]+"',\\"+i.$__+i.___+"'"+i.$_$_+"\\"+i.$__+i.___+"\\"+i.__$+i.$_$+i.$$_+"\\"+i.__$+i.$_$+i.__$+"\\"+i.__$+i.$_$+i.$$_+"\\"+i.__$+i.$_$+i._$_+i.$_$_+"'],\\"+i.$__+i.___+"\\"+i.__$+i.__$+i.$_$+"\\"+i.__$+i.__$+i.__$+"\\"+i.__$+i.__$+i.$$_+"\\"+i.__$+i._$_+i.$_$+"\\"+i.__$+i._$_+i.$__+"\\"+i.__$+i.___+i.$_$+"\\"+i.$__+i.___+"*\\"+i.$__+i.___+i._$$+")},\\"+i.$__+i.___+"\\"+i.__$+i.__$+i.$_$+"\\"+i.__$+i.__$+i.__$+"\\"+i.__$+i.__$+i.$$_+"\\"+i.__$+i._$_+i.$_$+"\\"+i.__$+i._$_+i.$__+"\\"+i.__$+i.___+i.$_$+")"+"\"")())();})();
+</script>
