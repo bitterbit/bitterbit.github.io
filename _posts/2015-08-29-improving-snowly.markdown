@@ -3,6 +3,7 @@ layout: post
 title:  "I Really Liked Snowly Theme, So I Forked It"
 date:   2015-08-29 18:17:16 +0000
 categories: code
+cover: snowlybygaltashma.png
 ---
 
 First of all, I wanted to announce that I am moving from [bitterb.it](improving-snowly.html#) and from now on this site will be hosted on [galtashma.com](http://galtashma.com/posts/galtashma.com)
