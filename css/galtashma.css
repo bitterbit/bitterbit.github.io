@@ -1,0 +1,113 @@
+
+		#top-line {
+			background: #fff;
+			height: 50px;
+			margin-top: 0px;
+			padding-top: 0px;
+
+			border-bottom: 2px solid #e7e7e7;
+
+			margin-bottom: 0;
+			border-radius: 0;
+
+			box-shadow: 0px 1px 1px #000;
+		}
+
+		#site-name {
+			color: #777;
+			text-decoration: none;
+
+			position: absolute;
+			left: 60px;
+			top: 15px;
+			text-transform: uppercase;
+		}
+
+		#top {
+			padding-bottom: 50px;
+			padding-top: 0px;
+			box-shadow: 0 10px 10px rgba(2, 2, 2, 0.03);
+		}
+
+		#top-part {
+			padding-bottom: 50px;
+			color: white;
+		}
+
+		#top-container {
+			padding-left:100px;
+		}
+
+		#title {
+			font-size: 60px;
+			margin-top: 75px;
+		}
+
+		#tash {
+			font-weight: 300;
+		}
+
+		#slogan {
+			padding-right: 10px;
+		}
+
+
+		@media screen and (max-width: 800px) {
+			#title {
+				margin-top: 40px;
+				font-size: 46px;
+			}
+			#slogan {
+				font-size: 20px;
+			}
+			#top-container {
+				padding-left: 30px;
+			}
+			#menu-buttons .menuButton {
+				padding-left: 3%;
+  				padding-right: 3%;
+			}
+		}
+
+		#menu-buttons {
+			padding-bottom: 5px;
+		}
+
+		.menuButton, .menuButton:visited, .menuButton:link {
+			margin: 5px;
+			border-radius: 9px;
+			border: 2px solid white;
+			color: white;
+			cursor: pointer;
+			padding: 9px;
+			padding-left: 25px;
+			padding-right: 25px;
+			text-decoration: none;
+			font-weight: 500;
+		}
+
+		.menuButton:hover,  .menuButton:active {
+			background-color: white;
+			color: #444;
+			text-decoration: none;
+		}
+
+		.menuButton:active {
+			position:relative;
+			top:1px;
+		}
+
+
+
+		#main {
+			margin-bottom: 50px;
+		}
+
+		.date-text {
+			padding-top: 15px;
+		}
+
+		.post a, .post  a:hover, .post  a:visited, .post a:link, .post a:active {
+			color: #444;
+			text-decoration: none;
+		}
