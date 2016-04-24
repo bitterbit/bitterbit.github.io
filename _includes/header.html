@@ -1,11 +1,29 @@
-<header>
-	<div id="top-line">
-		<a class="user-avatar">
-			<img src="{{ site.url }}assets/img/avatar.jpg">
-		</a>
+<header id="top" class="animateColors">
+	<nav class="navbar navbar-default">
 
-		<a href="index.html" id="site-name">
-			<strong>Galtashma | Dont Nibble, Just Byte</strong>
-		</a>
-	</div>
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-menu">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a class="user-avatar">
+				<img src='{{ site.url }}assets/img/avatar.jpg'>
+    		</a>
+
+			<a href="{{ site.url }}" class="navbar-brand">
+				<strong>Galtashma | Dont Nibble, Just Byte</strong>
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="navbar-collapse-menu">
+			<ul class="nav navbar-nav navbar-right">
+				{% for page in site.html_pages %}
+					<li><a href="{{ page.url }}" title="{{page.title}}">{{page.title}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</nav>
 </header>
