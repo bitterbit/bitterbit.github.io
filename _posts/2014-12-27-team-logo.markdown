@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Team Logo"
+date:   2014-12-27 03:01:00 +0300
+categories: art
+author: Gal Tashma
+---
+
+I Have joined my current team at work half a year ago, we have been through a lot together so i figured out its time for our own logo.
+
+![](/assets/img/team-icon.jpg)
