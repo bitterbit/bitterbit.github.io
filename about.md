@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+weight: 30
 ---
 
 I am a software developer living in Tel Aviv, Israel. I have been involved in numerous projects working on front and backend alike. My preferred languages are Python, Java, Javascript and Golang. I like to develop my own projects once in a while, Sometimes I even write about them.

@@ -20,7 +20,8 @@
 
 		<div class="collapse navbar-collapse" id="navbar-collapse-menu">
 			<ul class="nav navbar-nav navbar-right">
-				{% for page in site.html_pages %}
+                                {% assign pages = site.html_pages | sort:"weight"  %}
+				{% for page in pages %}
 					<li><a href="{{ page.url }}" title="{{page.title}}">{{page.title}}</a></li>
 				{% endfor %}
 			</ul>

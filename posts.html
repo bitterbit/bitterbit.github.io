@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Posts
+weight: 10
 ---
 
 <main class="container">
@@ -16,22 +17,18 @@ title: Posts
     		</header>
     
             {% if post.cover %}
-    		    <p><img width=670 src="{{ site.url }}assets/photos/{{ post.cover }}"></img></p>
+    		    <p><img width=670 src="{{ site.url }}assets/img/{{ post.cover }}"></img></p>
     		{% endif %}
     		
     		
-			<p class="post-body">
-			    {% if post.content contains '<!--more-->' %}
-                    {{ post.content | split:'<!--more-->' | first }}
-                {% else %}
-                    {{ post.excerpt }}
-                {% endif %}
-			</p>
-    
-    		<p><a href="{{ post.url }}" rel="article">more</a></p>
+	        <p class="post-body">
+		    {% if post.content contains '<!--more-->' %}
+                        {{ post.content | split:'<!--more-->' | first }}
+                    {% else %}
+                        {{ post.content |  strip_html | truncatewords: 100}}
+                    {% endif %}
+                    <br><a href="{{ post.url }}" rel="article">more</a>
+                </p>
     	</article>	
-    	
-    
     {% endfor %}
-    
 </main>
