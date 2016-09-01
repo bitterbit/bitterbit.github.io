@@ -7,7 +7,7 @@ weight: 20
 
 <main class="container">
                 <style>
-                    img {
+                    .app-icon {
                         margin-top: 25px;
                     }
                 </style>
