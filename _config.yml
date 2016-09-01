@@ -9,7 +9,7 @@
 title: GALTASHMA | DONT NIBBLE, JUST BYTE
 email: gtappsdev@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-    Personal blog to write whats on my mind. Currently based on Jekyll + Github.
+    Personal blog where I will be writing whats on my mind. Currently based on Jekyll + Github.
     My Hobbies mostly include programming, arts, design and electronics.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.galtashma.com/" # the base hostname & protocol for your site
