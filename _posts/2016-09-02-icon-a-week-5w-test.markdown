@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Icon A Weeke 4 TEST"
+title:  "Icon A Weeke 4  4TEST"
 date:   2016-09-03 00:01:53 +0300
 categories: icon-a-week
 cover: panda.png 
