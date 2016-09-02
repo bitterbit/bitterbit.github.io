@@ -2,7 +2,8 @@
 layout: post
 title:  "Icon A Week #1"
 date:   2016-08-28 23:44:01 +0300
-categories: art
+categories: icon-a-week
+cover: bennys.png
 author: Gal Tashma
 ---
 
