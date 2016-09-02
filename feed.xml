@@ -24,6 +24,13 @@ layout: null
         {% for cat in post.categories %}
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
+        {% if post.cover %}
+        <image>
+            <title>Cover Photo</title>
+            <url>{{ site.baseurl | prepend: site.url }}/assets/img/{{ post.cover }}</url>
+            <link>{{ site.url }}</link>
+        </image>
+        {% endif %}
       </item>
     {% endfor %}
   </channel>
