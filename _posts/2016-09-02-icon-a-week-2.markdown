@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Icon A Week #2"
+date:   2016-09-02 21:32:54 +0300
+categories: icon-a-week
+author: Gal Tashma
+---
+
+## (2) PANDA
+![](/assets/img/panda.png)
