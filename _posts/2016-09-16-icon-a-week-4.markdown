@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Icon A Week #4"
+date:   2016-09-16 13:13:00 +0300
+categories: icon-a-week
+cover: icecream.png 
+author: Gal Tashma
+---
+
+## (4) ICE CREAM 
+![](/assets/img/icecream.png)
