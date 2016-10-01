@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Icon A Week #6"
+date:   2016-10-01 21:39:00 +0300
+categories: icon-a-week
+cover: bird.png 
+author: Gal Tashma
+---
+
+## (6) PARROT 
+![](/assets/img/bird.png)
