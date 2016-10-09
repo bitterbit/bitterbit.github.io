@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Icon A Week #7"
+date:   2016-10-10 00:45:00 +0300
+categories: icon-a-week
+cover: lips.png 
+author: Gal Tashma
+---
+
+## (7) LIPS 
+![](/assets/img/lips.png)
