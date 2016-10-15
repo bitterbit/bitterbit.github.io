@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Icon A Week #8"
+date:   2016-10-16 00:54:00 +0300
+categories: icon-a-week
+cover: midnight-coffee.png 
+author: Gal Tashma
+---
+
+## (8) MIDNIGHT COFFEE
+![](/assets/img/midnight-coffee.png)
