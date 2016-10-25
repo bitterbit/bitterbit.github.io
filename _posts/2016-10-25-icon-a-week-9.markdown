@@ -7,5 +7,5 @@ cover: buggagum.png
 author: Gal Tashma
 ---
 
-## (9) BUGGA GUM 
+## (9) BUGGA GUM    
 ![](/assets/img/buggagum.png)
