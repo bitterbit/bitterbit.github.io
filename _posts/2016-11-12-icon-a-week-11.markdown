@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Icon A Week #11"
+date:   2016-11-12 16:53:00 +0300
+categories: icon-a-week
+cover: kof.png 
+author: Gal Tashma
+---
+
+## (11) KOF   
+![](/assets/img/kof.png)
