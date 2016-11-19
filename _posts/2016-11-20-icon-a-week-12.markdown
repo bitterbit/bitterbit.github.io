@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Icon A Week #12"
-date: 2016-11-20 01:46:48 +0200
+date: 2016-11-20 01:48:50 +0200
 categories: icon-a-week
 cover: watermelon.png
 author: Gal Tashma
 ---
 
-\#\# (12) 
+## (12) WATERMELON
 ![](/assets/img/watermelon.png)
