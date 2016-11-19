@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Icon A Week 12"
+date: 2016-11-20 01:41:09 +0200
+categories: icon-a-week
+cover: watermelon.png
+author: Gal Tashma
+---
+
+\#\# (12) watermelon
+![](/assets/img/watermelon.png)
