@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Icon A Week #13"
+date: 2016-11-26 16:20:41 +0200
+categories: icon-a-week
+cover: dragon.png
+author: Gal Tashma
+---
+
+## (13) DRAGON
+![](/assets/img/dragon.png)
