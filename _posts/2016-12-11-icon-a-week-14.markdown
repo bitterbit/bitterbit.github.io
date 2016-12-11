@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Icon A Week #14"
+date: 2016-12-11 23:52:31 +0200
+categories: icon-a-week
+cover: autopilot.png
+author: Gal Tashma
+---
+
+## (14) AUTOPILOT
+![](/assets/img/autopilot.png)
