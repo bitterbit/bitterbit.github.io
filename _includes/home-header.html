@@ -20,7 +20,9 @@
 			<div id="menu-buttons">
                                 {% assign pages = site.html_pages | sort:"weight"  %}
 				{% for page in pages %}
+				{% unless page.exclude %} 
 					<a class="menuButton" href="{{ page.url }}" title="{{page.title}}">{{page.title}}</a>
+				{% endunless %}
 				{% endfor %}
 			</div>
 	
