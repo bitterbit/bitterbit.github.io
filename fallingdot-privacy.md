@@ -3,6 +3,7 @@ layout: page
 title: Falling Dot - Privacy
 permalink: /fallingdot-privacy/
 weight: 30
+exclude: true
 ---
 
 Privacy Policy
