@@ -22,7 +22,9 @@
 			<ul class="nav navbar-nav navbar-right">
                                 {% assign pages = site.html_pages | sort:"weight"  %}
 				{% for page in pages %}
+				{% unless page.exclude %} 
 					<li><a href="{{ page.url }}" title="{{page.title}}">{{page.title}}</a></li>
+				{% endunless %}
 				{% endfor %}
 			</ul>
 		</div>
