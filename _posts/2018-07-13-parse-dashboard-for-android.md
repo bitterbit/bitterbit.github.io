@@ -1,9 +1,10 @@
+Hi guys!  
+I have built an Android mobile client for Parse a few months ago. In the beginning, I made it for myself but then I realized so many people can enjoy it too. 
+
 <img src="https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/parse_dashboard_android.png" height=150></img>
 <a href='https://play.google.com/store/apps/details?id=com.galtashma.parsedashboard&utm_source=github&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'> <img alt='Get it on Google Play' width=200 src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 
-Hi guys!  
-I have built an Android mobile client for Parse a few months ago. In the beginning, I made it for myself but then I realized so many people can enjoy it too. 
-For the guys who don't know what parse is, [Parse](https://parseplatform.org/) is an [MBaaS](https://en.wikipedia.org/wiki/Mobile_backend_as_a_service) server allowing developers to fastly prototype client-side. 
+If you didnt hear of parse is up until now, [Parse](https://parseplatform.org/) is an [MBaaS](https://en.wikipedia.org/wiki/Mobile_backend_as_a_service) server allowing developers to fastly prototype client-side. 
 Essentially it allows you to maximize the time you put on developing your app by eliminating the need to develop a server for each project. 
 Parse was made opensource after Facebook has shut it down in 2013 and is now developed by the community
 
