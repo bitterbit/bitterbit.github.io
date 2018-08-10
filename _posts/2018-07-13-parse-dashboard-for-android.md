@@ -1,9 +1,7 @@
 Hi guys!  
 I have built an Android mobile client for Parse a few months ago. In the beginning, I made it for myself but then I realized so many people can enjoy it too. 
 
-![Parse Dashboard](https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/parse_dashboard_android.png){:width="150px"}
-
-<a href='https://play.google.com/store/apps/details?id=com.galtashma.parsedashboard&utm_source=github&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png){:width="150px"}</a>
+![Parse Dashboard](https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/parse_dashboard_android.png){:width="200px"} <a href='https://play.google.com/store/apps/details?id=com.galtashma.parsedashboard&utm_source=github&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png){:width="150px"}</a>
 
 If you didnt hear of parse is up until now, [Parse](https://parseplatform.org/) is an [MBaaS](https://en.wikipedia.org/wiki/Mobile_backend_as_a_service) server allowing developers to fastly prototype client-side. 
 Essentially it allows you to maximize the time you put on developing your app by eliminating the need to develop a server for each project. 
@@ -16,9 +14,9 @@ I wanted to do it for a long time, after seeing the cool parse client for iPhone
 - Delete objects
 
 ### Screenshots 
-<img src="https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/device-2018-03-18-224304.png" width=150></img>
-<img src="https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/device-2018-03-18-223646.png" width=150></img>
-<img src="https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/device-2018-03-18-223736.png" width=150></img>
+![Screenshot 1](https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/device-2018-03-18-224304.png){:width="150px"}
+![Screenshot 2](https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/device-2018-03-18-223646.png){:width="150px"}
+![Screenshot 3](https://github.com/bitterbit/Parse-Dashboard-Android/raw/master/imgs/device-2018-03-18-223736.png){:width="150px"}
 
 ## Interesting anecdotes
 
