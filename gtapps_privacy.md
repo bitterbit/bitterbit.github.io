@@ -1,7 +1,7 @@
 ---
 layout: page
 title: GTApps Dev - Privacy
-permalink: /fallingdot-privacy/
+permalink: /gtapps-privacy/
 weight: 30
 exclude: true
 ---
