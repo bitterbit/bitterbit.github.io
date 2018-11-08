@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Parse Dashboard - Privacy
-permalink: /pd-privacy/
+permalink: /parsed-privacy/
 weight: 30
+exclude: true
 ---
 
 Privacy Policy
 
-Gal Tashma built the Parse Dashboard. This SERVICE is provided by Gal Tashma at no cost and is intended for use as is.
+Gal Tashma built the Parse Dashboard App. This SERVICE is provided by Gal Tashma at no cost and is intended for use as is.
 
 This page is used to inform website visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
 
