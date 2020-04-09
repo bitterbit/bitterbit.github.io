@@ -2,13 +2,13 @@
 published: true
 title: "Icon for brandly/Lax"
 ---
-An icon I designed was accepted and is now used in the opensource project [brandly/lax](https://github.com/brandly/Lax)!
+An icon I designed was accepted and is now used in the opensource project [brandly/Lax](https://github.com/brandly/Lax)!
 It took some time but now it's in :) 
 
 Lax is an IRC client built with Electron & React.
 
 
-### The new icon 
+### The New Icon 
 I combined a standard "chat" icon with the electrons illustration emphasising on the electron backend. The light blue color is a continuation of the blue shades in the app. 
 ![Icon](/assets/img/51934175-adc32b80-240b-11e9-9d12-22fca5152e0f.png)
 
