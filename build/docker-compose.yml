@@ -1,0 +1,6 @@
+version: '3'
+services:
+    jekyll:
+        image: "bretfisher:jekyll-serve"
+        ports:
+            - "8080:4000"
