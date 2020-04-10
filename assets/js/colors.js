@@ -1,11 +1,9 @@
 (function(){
-	items = document.getElementsByClassName('animateColors')
-	console.log(items, items.legnth);
-	for (i=0; i < items.length; i++) {
-		var item = items[i];
-		item.className += " animateColors" + Math.floor((Math.random()*5)+1);
-		console.log(item, item.className);
-	}
+    items = document.getElementsByClassName('animateColors')
+    for (i=0; i < items.length; i++) {
+        var item = items[i];
+        item.className += " animateColors" + Math.floor((Math.random()*5)+1);
+    }
 })();
 
 
@@ -18,8 +16,12 @@ setTimeout(function(){ changeWord('adj', ['cool', 'great', 'awseome', 'magical']
 setTimeout(function(){ changeWord('noun', ['apps', 'websites', 'projects', 'time wasters'], 		18 * SECOND)}, 	25 * SECOND)
 
 function changeWord(id, words, duration){
+        if (window["$"] === undefined) { return; }
+
 	var a = "#" +id;
 	var item = $(a);
+        if (item == undefined) { return; }
+
 	var part_dur = 500
 
 	item.animate({ opacity: 0 }, part_dur)
