@@ -46,25 +46,9 @@ weight: 20
             }
 
 	</style>
-		
-
-    <h4><b>Papers</b></h4>
-    <div class="area">
-        <a class="title" href="https://www.digitalwhisper.co.il/files/Zines/0x3B/DW59-2-TheHusky.pdf">[DW59-2] The Husky Code - Digital Whisper</a>
-    </div>
 
     <h4><b>Apps</b></h4>
     <div class="area">
-        <span>
-            <a alt="Hangman (Hebrew)" class="app-icon" href="https://play.google.com/store/apps/details?id=com.gtr.hangman">
-            <img width="64" height="64" src='/assets/img/hangman-icon.png'>
-            </a>
-        </span>
-        <span>
-            <a alt="Hangman (English)" class="app-icon" href="https://play.google.com/store/apps/details?id=com.gtr.hangman.world">
-            <img width="64" height="64" src='/assets/img/hangman-en-icon.png'>
-            </a>
-        </span>
         <span>
             <a alt="Falling DOT" class="app-icon" href="https://play.google.com/store/apps/details?id=com.pickleperfect.fallingdot">
             <img width="64" height="64" src='/assets/img/fallingdot.png'>
@@ -75,11 +59,26 @@ weight: 20
             <img width="64" height="64" src='/assets/img/parse_android_dashboard.png'>
             </a>
         </span>
+        <span>
+            <a alt="Hangman (Hebrew)" class="app-icon" href="https://play.google.com/store/apps/details?id=com.gtr.hangman">
+            <img width="64" height="64" src='/assets/img/hangman-icon.png'>
+            </a>
+        </span>
+        <span>
+            <a alt="Hangman (English)" class="app-icon" href="https://play.google.com/store/apps/details?id=com.gtr.hangman.world">
+            <img width="64" height="64" src='/assets/img/hangman-en-icon.png'>
+            </a>
+        </span>
+    </div>
+
+    <h4><b>Papers</b></h4>
+    <div class="area">
+        <a class="title" href="https://www.digitalwhisper.co.il/files/Zines/0x3B/DW59-2-TheHusky.pdf">[DW59-2] The Husky Code - Digital Whisper</a>
     </div>
 
     <h4><b>Open Source</b></h4>
     <div class="area" id="projects">
-        <a href="">More...</a>
+        <a href="https://github.com/bitterbit">More...</a>
     </div>
 
 <script>
