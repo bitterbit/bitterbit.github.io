@@ -22,14 +22,19 @@
 		}
 
 		#site-name {
-			color: #777;
 			text-decoration: none;
 
 			position: absolute;
 			left: 60px;
 			top: 15px;
-			text-transform: uppercase;
 		}
+                .navbar-brand strong  {
+			color: #444;
+			text-transform: uppercase !important; 
+                }
+                .navbar-brand {
+			text-transform: lowercase !important; 
+                }
 
 		#top {
 			padding-bottom: 50px;
