@@ -5,92 +5,156 @@ permalink: /projects/
 weight: 20
 ---
 
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+
 <main class="container">
 	<style>
-	    .app-icon {
-		margin-top: 25px;
-	    }
+            .title {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+
+            .subtitle {
+                font-size: 14px;
+                padding-bottom: 10px;
+            }
+
+            .app-icon {
+                margin-right: 10px;
+            }
+
+            .area {
+                padding-bottom: 10px;
+            }
+
+            .icon {
+                fill: #586069;
+            }
+
 	</style>
 		
 
-<h1>Apps</h1>
+    <h4><b>Papers</b></h4>
+    <div class="area">
+        <a class="title" href="https://www.digitalwhisper.co.il/files/Zines/0x3B/DW59-2-TheHusky.pdf">[DW59-2] The Husky Code - Digital Whisper</a>
+    </div>
 
-<div class="row">
-	<div class="col-md-2">
-		<img class="app-icon" src="/assets/img/hangman-icon.png">
-	</div>
-	<div class="col-md-8">
-		<h2><a href="https://play.google.com/store/apps/details?id=com.gtr.hangman.world">Hangman</a></h2>
-		<p>
-			Hangman is a fun game that improves your languege.
-			Do your best and you may find yourself in the high-score table.
-			<a href="https://play.google.com/store/apps/details?id=com.gtr.hangman.world">link</a>
-		</p>
-	</div>
-</div>
+    <h4><b>Apps</b></h4>
+    <div class="area">
+        <span>
+            <a alt="Hangman (Hebrew)" class="app-icon" href="https://play.google.com/store/apps/details?id=com.gtr.hangman">
+            <img width="64" height="64" src='/assets/img/hangman-icon.png'>
+            </a>
+        </span>
+        <span>
+            <a alt="Hangman (English)" class="app-icon" href="https://play.google.com/store/apps/details?id=com.gtr.hangman.world">
+            <img width="64" height="64" src='/assets/img/hangman-en-icon.png'>
+            </a>
+        </span>
+        <span>
+            <a alt="Falling DOT" class="app-icon" href="https://play.google.com/store/apps/details?id=com.pickleperfect.fallingdot">
+            <img width="64" height="64" src='/assets/img/fallingdot.png'>
+            </a>
+        </span>
+        <span>
+            <a alt="Parse Dashboard" class="app-icon" href="https://play.google.com/store/apps/details?id=com.galtashma.parsedashboard">
+            <img width="64" height="64" src='/assets/img/parse_android_dashboard.png'>
+            </a>
+        </span>
+    </div>
 
-<div class="row">
-	<div class="col-md-2">
-		<img class="app-icon" src="/assets/img/parse_android_dashboard.png">
-	</div>
-	<div class="col-md-8">
-		<h2><a href="https://play.google.com/store/apps/details?id=com.galtashma.parsedashboard">Parse Dashbarod for Android</a></h2>
-		<p>
-			A beautiful moile client for managing your Parse apps on your android phone.
-			<a href="https://play.google.com/store/apps/details?id=com.galtashma.parsedashboard">Download</a>, <a href="https://github.com/bitterbit/Parse-Dashboard-Android">Github</a>.
-		</p>
-	</div>
-</div>
+    <h4><b>Open Source</b></h4>
+    <div class="area" id="projects">
+        <a href="">More...</a>
+    </div>
+
+<script>
+
+    var projects = [
+        "bitterbit/Parse-Dashboard-Android",
+        "bitterbit/LazyParse",
+        "bitterbit/zenme-whatsthatcalled",
+        "bitterbit/prufer-generator",
+        "bitterbit/quotes-app",
+        "bitterbit/quotes-server",
+        "bitterbit/flowjs",
+        "bitterbit/passformac",
+        "bitterbit/bitterbit.github.io"
+    ];
+
+    var github = new GitHub();
+    var me = github.getUser("bitterbit");
+
+    me.listRepos().then(function(repos){
+
+        repos.data
+            .filter(function(r) { return shouldDisplayRepo(r.full_name)})
+            .sort(function(a,b) { 
+                var s1 = a.stargazers_count;
+                var s2 = b.stargazers_count;
+                if (s1 > s2){ return 1; }
+                else if (s1 == s2) { return a.full_name.localeCompare(b.full_name); }
+                else { return -1; }
+            }).forEach(function(repo){
+                displayRepo(repo);
+            });
+
+    });
+
+    function shouldDisplayRepo(repoName) {
+        return projects.indexOf(repoName) !== -1;
+    }
+
+    const starIcon = '<svg viewBox="0 0 18 20" width="12" height="12" role="img"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>'
+    const forkIcon = '<svg viewBox="0 0 10 16" version="1.1" width="8" height="12" role="img"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg>';
+
+    function displayRepo(repoData) {
+        // github colors: https://github.com/ozh/github-colors/blob/master/colors.json
+        var container = $("<div></div>");
+        var topSpan = $("<span></span>");
+        var title = $("<a class='title'></a>");
+        var star = $("<a class='icon' role=img>"+starIcon+"</a>");
+        var fork = $("<a class='icon' role=img>"+forkIcon+"</a>");
+        var starCount = $("<a></a>");
+        var forkCount = $("<a></a>");
+        var subtitle = $("<p class='subtitle'></p>");
 
 
-<div class="row">
-	<div class="col-md-2">
-		<img class="app-icon" src="/assets/img/quotes-icon.png">
-	</div>
-	<div class="col-md-8">
-		<h2><a href="https://play.google.com/store/apps/details?id=com.gtr.quotes">Quotes</a></h2>
-		<p>
-			Read and share fabulous quotes that will aspire you to love ❤, think and laugh!
-			<a href="https://play.google.com/store/apps/details?id=com.gtr.quotes">link</a>
-		</p>
-	</div>
-</div>
-		
-<h1>Projects</h1>
-	<div class="row">
-		<div class="col-md-2">
-			<img src="/assets/img/H.png" style="padding-top: 20px;"/>
-		</div>
-		<div class="col-md-8">
-			<h2>Husky Ascii</h2>
-			<p>
-				Obfuscate javascript code to appear as ascii art pictures. When run they print themselfs, as quines. <a href="http://www.galtashma.com/art/2014/10/12/the-husky-code.html">Blog post</a>, <a href="https://www.digitalwhisper.co.il/files/Zines/0x3B/DW59-2-TheHusky.pdf">Paper (Digital Whisper)</a>.
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-2">
-			<img src="/assets/img/J.png" style="padding-top: 20px;"/>
-		</div>
-		<div class="col-md-8">
-			<h2><a href="https://github.com/bitterbit/flowjs">FlowJS</a></h2>
-			<p>
-				FlowJS allows you to render dynamic, animated flow charts using HTML5 canvas 
-				<a href="https://github.com/bitterbit/flowjs">Github</a>.
-			</p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-2">
-			<img src="/assets/img/parse.png" style="padding-top: 20px;"/>
-		</div>
-		<div class="col-md-8">
-			<h2><a href="https://github.com/bitterbit/LazyParse">Lazy Parse</a></h2>
-			<p>
-				Helper for parse-sdk making loading and using parse objects easy.
-				<a href="https://github.com/bitterbit/LazyParse">Github</a>.
-			</p>
-		</div>
-	</div>
+        star.attr("href", repoData.html_url + "/stargazers");
+        fork.attr("href", repoData.html_url + "/forks");
+        starCount.text(repoData.stargazers_count);
+        starCount.css("margin-left", "2px");
+        starCount.css("margin-right", "4px");
+        starCount.attr("href", repoData.html_url + "/stargazers");
+        forkCount.text(repoData.forks_count);
+        forkCount.css("margin-left", "2px");
+        forkCount.css("margin-right", "4px");
+        forkCount.attr("href", repoData.html_url + "/forks");
+        
+
+        title.text(repoData.full_name);
+        title.attr("href", repoData.html_url);
+        subtitle.text(repoData.description);
+
+        topSpan.append(title);
+        topSpan.append(star);
+        topSpan.append(starCount);
+        topSpan.append(fork);
+        topSpan.append(forkCount);
+
+        container.append(topSpan);
+        container.append(subtitle);
+        $("#projects").prepend(container);
+         
+        console.log("display repo", repoData);
+    }
+
+    console.log("Hello")
+</script>
 
 </main>
