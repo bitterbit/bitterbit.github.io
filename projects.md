@@ -11,6 +11,7 @@ weight: 20
   crossorigin="anonymous"></script>
 
 <script src="https://unpkg.com/github-api/dist/GitHub.bundle.min.js"></script>
+<script src="/assets/js/github-colors.js"></script>
 
 <main class="container">
 	<style>
@@ -34,6 +35,14 @@ weight: 20
 
             .icon {
                 fill: #586069;
+            }
+
+            .repo-language-color {
+                position: relative;
+                display: inline-block;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
             }
 
 	</style>
@@ -84,7 +93,8 @@ weight: 20
         "bitterbit/quotes-server",
         "bitterbit/flowjs",
         "bitterbit/passformac",
-        "bitterbit/bitterbit.github.io"
+        "bitterbit/bitterbit.github.io",
+        "bitterbit/stdout-pub"
     ];
 
     var github = new GitHub();
@@ -120,6 +130,8 @@ weight: 20
         var title = $("<a class='title'></a>");
         var star = $("<a class='icon' role=img>"+starIcon+"</a>");
         var fork = $("<a class='icon' role=img>"+forkIcon+"</a>");
+        var lang = $("<span class='repo-language-color'></span>");
+        var langText = $("<span></span>");
         var starCount = $("<a></a>");
         var forkCount = $("<a></a>");
         var subtitle = $("<p class='subtitle'></p>");
@@ -127,6 +139,7 @@ weight: 20
         var stargazers_url = repoData.html_url + "/stargazers";
         var forks_url = repoData.forks_count > 0 ? repoData.html_url + "/network/members" : null;
 
+        star.css("margin-left", "10px");
         star.attr("href", stargazers_url);
         fork.attr("href", forks_url);
 
@@ -139,6 +152,20 @@ weight: 20
         forkCount.css("margin-left", "2px");
         forkCount.css("margin-right", "4px");
         forkCount.attr("href", forks_url);
+
+        
+        var langColor = "#444";
+        if (githubColors.hasOwnProperty(repoData.language)) {
+            langColor = githubColors[repoData.language].color;
+        }
+
+        lang.css("background-color", langColor);
+        lang.css("margin-left", "10px");
+        lang.css("margin-right", "4px");
+        langText.css("margin-left", "2px");
+        langText.css("margin-right", "4px");
+        langText.css("font-size", "10px")
+        langText.text(repoData.language);
         
 
         title.text(repoData.full_name);
@@ -150,6 +177,8 @@ weight: 20
         topSpan.append(starCount);
         topSpan.append(fork);
         topSpan.append(forkCount);
+        topSpan.append(lang);
+        topSpan.append(langText);
 
         container.append(topSpan);
         container.append(subtitle);
