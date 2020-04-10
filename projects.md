@@ -124,17 +124,21 @@ weight: 20
         var forkCount = $("<a></a>");
         var subtitle = $("<p class='subtitle'></p>");
 
+        var stargazers_url = repoData.html_url + "/stargazers";
+        var forks_url = repoData.forks_count > 0 ? repoData.html_url + "/network/members" : null;
 
-        star.attr("href", repoData.html_url + "/stargazers");
-        fork.attr("href", repoData.html_url + "/forks");
+        star.attr("href", stargazers_url);
+        fork.attr("href", forks_url);
+
         starCount.text(repoData.stargazers_count);
         starCount.css("margin-left", "2px");
         starCount.css("margin-right", "4px");
-        starCount.attr("href", repoData.html_url + "/stargazers");
+        starCount.attr("href", stargazers_url);
+
         forkCount.text(repoData.forks_count);
         forkCount.css("margin-left", "2px");
         forkCount.css("margin-right", "4px");
-        forkCount.attr("href", repoData.html_url + "/forks");
+        forkCount.attr("href", forks_url);
         
 
         title.text(repoData.full_name);
